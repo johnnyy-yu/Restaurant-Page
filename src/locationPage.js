@@ -32,31 +32,21 @@ export default function locationPage() {
       infoContainer.appendChild(name);
     })();
 
-    (function phoneNumber() {
+    const phoneNumber = (() => {
       const phone = document.createElement("div");
       phone.id = "phoneNumber";
       phone.textContent = "(123) 456-7890";
       infoContainer.appendChild(phone);
     })();
 
-    (function address() {
-      // const addressHeading = document.createElement("div");
-      // addressHeading.id = "address-heading";
-      // addressHeading.textContent = "Address:";
-      // locationContainer.appendChild(addressHeading);
-
+    const address= (() => {
       const address = document.createElement("div");
       address.id = "address";
       address.textContent = "123 W Maple Dr, Real City, CA 12345";
       infoContainer.appendChild(address);
     })();
 
-    (function hour() {
-      // const hoursHeading = document.createElement("div");
-      // hoursHeading.id = "hours-heading";
-      // hoursHeading.textContent = "Hours";
-      // locationContainer.appendChild(hoursHeading);
-
+    const hour = (() => {
       const hoursContainer = document.createElement("ul");
       hoursContainer.className = "location-hours";
       document.querySelector(".nearest").appendChild(hoursContainer);

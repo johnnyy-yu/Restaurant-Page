@@ -20,28 +20,28 @@ export class menuItems {
         const descriptionOfItem = this.description;
         const picOfItem = this.pic;
 
-        (function appendPic () {
+        const appendPic = (() => {
             const img = document.createElement("img");
             img.id = "img-" + foodItem;
             img.src = picOfItem;
             menuContainer.appendChild(img);
         })();
 
-        (function appendItem () {
+        const appendItem = (() => {
             const item = document.createElement("div");
             item.id = foodItem;
             item.textContent = foodItem;
             menuContainer.appendChild(item);
         })();
 
-        (function appendPrice () {
+        const appendPrice = (() => {
             const price = document.createElement("div");
             price.className = "price";
             price.textContent = priceOfItem;
             menuContainer.appendChild(price);
         })();
 
-        (function appendDescription () {
+        const appendDescription = (() => {
             const description = document.createElement('div');
             description.className = "description"
             description.textContent = descriptionOfItem;
