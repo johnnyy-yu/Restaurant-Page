@@ -7,11 +7,10 @@ export class menuItems {
     }
 
     appendMenuItem () {
-        const content = document.querySelector("#content")
         const item = document.createElement("div");
         item.className = "food";
         item.id = "container-" + this.item.replace(/ /g,'');
-        content.appendChild(item);
+        document.querySelector(".menu-page").appendChild(item);
 
         const menuID = "#" + item.id
         const menuContainer = document.querySelector(menuID)
@@ -37,14 +36,14 @@ export class menuItems {
 
         (function appendPrice () {
             const price = document.createElement("div");
-            price.id = "price-" + foodItem;
+            price.className = "price";
             price.textContent = priceOfItem;
             menuContainer.appendChild(price);
         })();
 
         (function appendDescription () {
             const description = document.createElement('div');
-            description.id = "description-" + foodItem;
+            description.className = "description"
             description.textContent = descriptionOfItem;
             menuContainer.appendChild(description);
         })();

@@ -4,7 +4,11 @@ import potstickerPic from "./img/Potstickers.jpeg";
 import combo from "./img/FriedCombo.jpeg";
 import taco from "./img/KoreanTaco.jpeg";
 
-export function menuList () {
+export default function menuPage () {
+    const container = document.createElement("div");
+    container.className = "menu-page";
+    document.querySelector("main").appendChild(container)
+
     const friedChicken = new menuItems("Korean Fried Chicken", "$15.95", "Combo 6 Wings + 3 Drums", combo);
     friedChicken.appendMenuItem();
 
